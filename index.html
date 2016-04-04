@@ -414,7 +414,7 @@
             <div class="eight columns">
 
                <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
+               <form action="https://script.google.com/macros/s/AKfycbxz0GGZGEwzmmcnmLgP-Mvji11z3ahhlRnb1LgTDOy55ugS1aM/exec" method="post" id="contactForm1" name="contactForm1">
                <fieldset>
 
                   <div>
@@ -434,11 +434,11 @@
 
                   <div>
                      <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="7" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea type="text" cols="50" rows="7" id="contactMessage" name="contactMessage"></textarea>
                   </div>
 
                   <div>
-                     <button class="submit">Submit</button>
+                     <button type="submit" class="submit">Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif">
                      </span>
@@ -521,6 +521,24 @@
 
    <!-- Java Script
    ================================================== -->
+   
+   <script type="text/javascript">
+    jQuery(function($){
+      $("form[name=contactForm1]").submit(function(e){
+        e.preventDefault(); // Keep the form from submitting
+        var form = $(this);
+
+        // Use the POST method to post to the same url as
+        // the real form, passing in newNickname as the only 
+        // data content
+        $.post( form.attr('action'), { newNickname: form.find(':text').val() }, function(data){
+          alert(data); // Alert the return from the server
+        }, "text" );
+      });
+    });
+</script>
+
+
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
