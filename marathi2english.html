@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1"><title>Marathi Converter - Romanization Transliteration</title><meta name="keywords" content="Marathi Converter, Romanization, Transliteration, Phonetics, Marathi, Latin, Convert, Characters, Scripts, Text," /><meta name="description" content="Convert Marathi letters into Latin letters also called Romanization or Transliteration, which allows you to read sounds phonetically. You don't have to be fluent at Marathi to be able to read it." /><style type="text/css">
+.tls {cursor:pointer; font-size:9pt; color:#666666; }
+.bordr { width:94%; color:blue; font-family:'Times New Roman'; font-size:12pt; padding:5px; scrollbar-base-color:transparent; scrollbar-track-color:transparent; }
+</style>
+<script language=Javascript> 
+<!--
+var sym;
+function latcyr () {
+sym = document.transcription.text2.value;
+sym = sym.replace(/क/g, "k");
+sym = sym.replace(/ख/g, "kh");
+sym = sym.replace(/ग/g, "ga");
+sym = sym.replace(/घ/g, "gh");
+sym = sym.replace(/ङ/g, "ng");
+sym = sym.replace(/च/g, "k");
+sym = sym.replace(/छ/g, "ch");
+sym = sym.replace(/ज/g, "j");
+sym = sym.replace(/झ/g, "jh");
+sym = sym.replace(/ञ/g, "ny");
+sym = sym.replace(/ट/g, "t");
+sym = sym.replace(/ठ/g, "th");
+sym = sym.replace(/ड/g, "d");
+sym = sym.replace(/ढ/g, "dh");
+sym = sym.replace(/ण/g, "n");
+sym = sym.replace(/त/g, "t");
+sym = sym.replace(/थ/g, "th");
+sym = sym.replace(/द/g, "d");
+sym = sym.replace(/ध/g, "dh");
+sym = sym.replace(/न/g, "n");
+sym = sym.replace(/प/g, "p");
+sym = sym.replace(/फ/g, "f");
+sym = sym.replace(/ब/g, "b");
+sym = sym.replace(/भ/g, "bh");
+sym = sym.replace(/म/g, "m");
+sym = sym.replace(/य/g, "y");
+sym = sym.replace(/र/g, "r");
+sym = sym.replace(/ल/g, "l");
+sym = sym.replace(/व/g, "v");
+sym = sym.replace(/श/g, "sh");
+sym = sym.replace(/ष/g, "s");
+sym = sym.replace(/स/g, "s");
+sym = sym.replace(/ह/g, "h");
+sym = sym.replace(/क़/g, "k");
+sym = sym.replace(/ख़/g, "kh");
+sym = sym.replace(/ग़/g, "g");
+sym = sym.replace(/ऩ/g, "n");
+sym = sym.replace(/ड़/g, "d");
+sym = sym.replace(/ढ/g, "dh");
+sym = sym.replace(/ढ़/g, "rh");
+sym = sym.replace(/ऱ/g, "r");
+sym = sym.replace(/य़/g, "ye");
+sym = sym.replace(/ळ/g, "l");
+sym = sym.replace(/ऴ/g, "ll");
+sym = sym.replace(/फ़/g, "f");
+sym = sym.replace(/ज़/g, "z");
+sym = sym.replace(/ऋ/g, "ri");
+sym = sym.replace(/ा/g, "aa");
+sym = sym.replace(/ि/g, "i");
+sym = sym.replace(/ी/g, "i");
+sym = sym.replace(/ु/g, "u");
+sym = sym.replace(/ू/g, "u");
+sym = sym.replace(/ॅ/g, "e");
+sym = sym.replace(/ॆ/g, "e");
+sym = sym.replace(/े/g, "e");
+sym = sym.replace(/ै/g, "ai");
+sym = sym.replace(/ॉ/g, "o");
+sym = sym.replace(/ॊ/g, "o");
+sym = sym.replace(/ो/g, "o");
+sym = sym.replace(/ौ/g, "au");
+sym = sym.replace(/अ/g, "a");
+sym = sym.replace(/आ/g, "aa");
+sym = sym.replace(/इ/g, "i");
+sym = sym.replace(/ई/g, "i");
+sym = sym.replace(/उ/g, "u");
+sym = sym.replace(/ऊ/g, "oo");
+sym = sym.replace(/ए/g, "e");
+sym = sym.replace(/ऐ/g, "ai");
+sym = sym.replace(/ऑ/g, "au");
+sym = sym.replace(/ओ/g, "o");
+sym = sym.replace(/औ/g, "au");
+sym = sym.replace(/ँ/g, "n");
+sym = sym.replace(/ं/g, "n");
+sym = sym.replace(/ः/g, "ah");
+sym = sym.replace(/़/g, "e");
+sym = sym.replace(/्/g, "");
+sym = sym.replace(/०/g, "0");
+sym = sym.replace(/१/g, "1");
+sym = sym.replace(/२/g, "2");
+sym = sym.replace(/३/g, "3");
+sym = sym.replace(/४/g, "4");
+sym = sym.replace(/५/g, "5");
+sym = sym.replace(/६/g, "6");
+sym = sym.replace(/७/g, "7");
+sym = sym.replace(/८/g, "8");
+sym = sym.replace(/९/g, "9");
+sym = sym.replace(/।/g, ".");
+sym = sym.replace(/ऍ/g, "e");
+sym = sym.replace(/ृ/g, "ri");
+sym = sym.replace(/ॄ/g, "rr");
+sym = sym.replace(/ॠ/g, "ṝ");
+sym = sym.replace(/ऌ/g, "ḷ");
+sym = sym.replace(/ॣ/g, "l");
+sym = sym.replace(/ॢ/g, "l");
+sym = sym.replace(/ॡ/g, "l");
+sym = sym.replace(/ॿ/g, "b");
+sym = sym.replace(/ॾ/g, "d");
+sym = sym.replace(/ॽ/g, "");
+sym = sym.replace(/ॼ/g, "j");
+sym = sym.replace(/ॻ/g, "g");
+sym = sym.replace(/ॐ/g, "om");
+sym = sym.replace(/ऽ/g, "'");
+sym = sym.replace(/e.a/g, "a");
+sym = sym.replace(/\n/g, "\n");
+document.transcription.text1.value = sym;
+}
+
+function converter () {
+sym = document.transcription.text1.value;
+sym = sym.replace(/क/g, "k");
+sym = sym.replace(/ख/g, "kh");
+sym = sym.replace(/ग/g, "ga");
+sym = sym.replace(/घ/g, "gh");
+sym = sym.replace(/ङ/g, "ng");
+sym = sym.replace(/च/g, "k");
+sym = sym.replace(/छ/g, "ch");
+sym = sym.replace(/ज/g, "j");
+sym = sym.replace(/झ/g, "z");
+sym = sym.replace(/ञ/g, "ny");
+sym = sym.replace(/ट/g, "t");
+sym = sym.replace(/ठ/g, "th");
+sym = sym.replace(/ड/g, "d");
+sym = sym.replace(/ढ/g, "dh");
+sym = sym.replace(/ण/g, "n");
+sym = sym.replace(/त/g, "t");
+sym = sym.replace(/थ/g, "th");
+sym = sym.replace(/द/g, "d");
+sym = sym.replace(/ध/g, "dh");
+sym = sym.replace(/न/g, "n");
+sym = sym.replace(/प/g, "p");
+sym = sym.replace(/फ/g, "f");
+sym = sym.replace(/ब/g, "b");
+sym = sym.replace(/भ/g, "bh");
+sym = sym.replace(/म/g, "m");
+sym = sym.replace(/य/g, "y");
+sym = sym.replace(/र/g, "r");
+sym = sym.replace(/ल/g, "l");
+sym = sym.replace(/व/g, "v");
+sym = sym.replace(/श/g, "sh");
+sym = sym.replace(/ष/g, "sh");
+sym = sym.replace(/स/g, "s");
+sym = sym.replace(/ह/g, "h");
+sym = sym.replace(/क़/g, "k");
+sym = sym.replace(/ख़/g, "kh");
+sym = sym.replace(/ग़/g, "g");
+sym = sym.replace(/ऩ/g, "n");
+sym = sym.replace(/ड़/g, "d");
+sym = sym.replace(/ढ/g, "dh");
+sym = sym.replace(/ढ़/g, "rh");
+sym = sym.replace(/ऱ/g, "r");
+sym = sym.replace(/य़/g, "ye");
+sym = sym.replace(/ळ/g, "l");
+sym = sym.replace(/ऴ/g, "ll");
+sym = sym.replace(/फ़/g, "f");
+sym = sym.replace(/ज़/g, "z");
+sym = sym.replace(/ऋ/g, "ri");
+sym = sym.replace(/ा/g, "a");
+sym = sym.replace(/ि/g, "i");
+sym = sym.replace(/ी/g, "i");
+sym = sym.replace(/ु/g, "u");
+sym = sym.replace(/ू/g, "u");
+sym = sym.replace(/ॅ/g, "e");
+sym = sym.replace(/ॆ/g, "e");
+sym = sym.replace(/े/g, "e");
+sym = sym.replace(/ै/g, "ai");
+sym = sym.replace(/ॉ/g, "o");
+sym = sym.replace(/ॊ/g, "o");
+sym = sym.replace(/ो/g, "o");
+sym = sym.replace(/ौ/g, "au");
+sym = sym.replace(/अ/g, "a");
+sym = sym.replace(/आ/g, "a");
+sym = sym.replace(/इ/g, "i");
+sym = sym.replace(/ई/g, "i");
+sym = sym.replace(/उ/g, "u");
+sym = sym.replace(/ऊ/g, "oo");
+sym = sym.replace(/ए/g, "e");
+sym = sym.replace(/ऐ/g, "ai");
+sym = sym.replace(/ऑ/g, "au");
+sym = sym.replace(/ओ/g, "o");
+sym = sym.replace(/औ/g, "au");
+sym = sym.replace(/ँ/g, "n");
+sym = sym.replace(/ं/g, "an");
+sym = sym.replace(/ः/g, "ah");
+sym = sym.replace(/़/g, "e");
+sym = sym.replace(/्/g, "");
+sym = sym.replace(/०/g, "0");
+sym = sym.replace(/१/g, "1");
+sym = sym.replace(/२/g, "2");
+sym = sym.replace(/३/g, "3");
+sym = sym.replace(/४/g, "4");
+sym = sym.replace(/५/g, "5");
+sym = sym.replace(/६/g, "6");
+sym = sym.replace(/७/g, "7");
+sym = sym.replace(/८/g, "8");
+sym = sym.replace(/९/g, "9");
+sym = sym.replace(/।/g, ".");
+sym = sym.replace(/ऍ/g, "e");
+sym = sym.replace(/ृ/g, "ri");
+sym = sym.replace(/ॄ/g, "rr");
+sym = sym.replace(/ॠ/g, "ṝ");
+sym = sym.replace(/ऌ/g, "ḷ");
+sym = sym.replace(/ॣ/g, "l");
+sym = sym.replace(/ॢ/g, "l");
+sym = sym.replace(/ॡ/g, "l");
+sym = sym.replace(/ॿ/g, "b");
+sym = sym.replace(/ॾ/g, "d");
+sym = sym.replace(/ॽ/g, "");
+sym = sym.replace(/ॼ/g, "j");
+sym = sym.replace(/ॻ/g, "g");
+sym = sym.replace(/ॐ/g, "om");
+sym = sym.replace(/ऽ/g, "'");
+sym = sym.replace(/e.a/g, "a");
+sym = sym.replace(/\n/g, "\n");
+document.transcription.text2.value = sym;
+}
+
+function copy1()
+{ textRange=document.transcription.text1.createTextRange();
+textRange.execCommand("Select");
+textRange="";
+}
+function copy2()
+{ textRange=document.transcription.text2.createTextRange();
+textRange.execCommand("Select");
+textRange="";
+}
+//--> </script>
+<!-- zz22zz -->
+    <!-- Bootstrap Core CSS -->
+    <link href="http://mylanguages.org/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="http://mylanguages.org/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- OLD AD REMOVED --></head>
+
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55405084-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <div id="wrapper">
+ <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+        
+            <div class="navbar-header">
+              
+                <a class="navbar-brand" href="http://mylanguages.org/">
+                    <img src="http://mylanguages.org/images/logo.png" width="150" height="38" alt="Learn">
+                </a>
+                
+                <a href="#menu-toggle" id="menu-toggle"><img src="http://mylanguages.org/images/menu.png" width="50" height="40" alt="MENU"></a>
+                
+            </div>
+            
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://mylanguages.org/learn_marathi.php">Learn Marathi</a></li></ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li><a href="http://mylanguages.org/learn_marathi.php" title="Learn Marathi">Learn Marathi</a></li>
+<li><a href="http://mylanguages.org/marathi_adjectives.php" title="marathi Adjectives">Marathi Adjectives</a></li>
+<li><a href="http://mylanguages.org/marathi_write.php" title="Write Your Name in Marathi">Your Name in Marathi</a></li>
+<li><a href="http://mylanguages.org/marathi_adverbs.php" title="marathi Adverbs">Marathi Adverbs</a></li>
+<li><a href="http://mylanguages.org/marathi_numbers.php" title="marathi Numbers">Marathi Numbers</a></li>
+<li><a href="http://mylanguages.org/marathi_games.php" title="marathi Game">Marathi Game</a></li>
+<li><a href="http://mylanguages.org/marathi_nouns.php" title="marathi Nouns">Marathi Nouns</a></li>
+<li><a href="http://mylanguages.org/marathi_articles.php" title="marathi Articles">Marathi Articles</a></li>
+<li><a href="http://mylanguages.org/marathi_pronouns.php" title="marathi Pronouns">Marathi Pronouns</a></li>
+<li><a href="http://mylanguages.org/marathi_plural.php" title="marathi Plural">Marathi Plural</a></li>
+<li><a href="http://mylanguages.org/marathi_feminine.php" title="marathi Feminine">Marathi Feminine</a></li>
+<li><a href="http://mylanguages.org/marathi_verbs.php" title="marathi Verbs">Marathi Verbs</a></li>
+<li><a href="http://mylanguages.org/marathi_prepositions.php" title="marathi Prepositions">Marathi Prepositions</a></li>
+<li><a href="http://mylanguages.org/marathi_negation.php" title="marathi Negation">Marathi Negation</a></li>
+<li><a href="http://mylanguages.org/marathi_questions.php" title="marathi Questions">Marathi Questions</a></li>
+<li><a href="http://mylanguages.org/marathi_vocabulary.php" title="marathi Vocabulary">Marathi Vocabulary</a></li>
+<li><a href="http://mylanguages.org/marathi_phrases.php" title="marathi Phrases">Marathi Phrases</a></li>
+<li><a href="http://mylanguages.org/translation.php" title="Languages Translation">Translation</a></li>
+<li><a href="http://mylanguages.org/dictionary.php" title="Languages Dictionary">Dictionary</a></li>
+<li><a href="http://mylanguages.org/marathi_romanization.php" title="Marathi Romanization">Romanization</a></li>
+<li><a href="http://mylanguages.org/transliteration.php" title="Languages Transliteration">Transliteration</a></li>
+<li><a href="http://mylanguages.org/languages_audio.php" title="Languages Audio">Audio Lessons</a></li>
+<li><a href="http://mylanguages.org/keyboard.php" title="Virtual Keyboard">Virtual Keyboard</a></li>
+<li><a href="http://mylanguages.org/radio.php" title="Radio">Radio</a></li>
+<li><a href="http://mylanguages.org/quiz.php" title="Language Test">Language Quiz</a></li>
+<li><a href="http://mylanguages.org/learning_tips.php" title="Language Learning Tips">Learning Tips</a></li>
+<li><a href="http://mylanguages.org/easy_languages.php" title="Easiest Languages to Learn">Easiest Languages</a></li>
+<li><a href="http://mylanguages.org/difficult_languages.php" title="Most Difficult Languages to Learn">Hardest Languages</a></li>
+<li><a href="http://learn101.org/marathi.php" title="Learn Marathi">Learn Marathi</a></li>
+<li><a href="http://ilanguages.org/marathi.php" title="Marathi Lessons">Marathi Lessons</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <section id="introduction"><h1 class="title">Marathi to Latin Converter</h3><p>You want to convert a text from <b>Marathi to Latin</b> characters so that you can read it with ease? Below you will find a <b>romanization</b> or <b>transliteration</b> tool that will help you do just that. That way, you will be able to read words the way they sound <b>phonetically</b>.</p><h3>Marathi to Latin (phonetics) Converter</h3>
+	
+	
+<div align="center">
+<noscript>
+<font color="red">Warning! JavaScript is disabled</font><br>
+You must enable JavaScript in your web browser.
+<p> 
+</noscript>
+<form name="transcription">
+<table width="100%">
+<tr align="center"> 
+<td width="50%"> Paste or type here: <br> <textarea name="text1" rows="20" onKeyUp="converter()" class="bordr"></textarea> <br> <br> 
+<input type="button" class="tls" onClick="transcription.text1.select();copy1()" value="Select"> 
+&nbsp; &nbsp; <input type="button" class="tls" onClick="reset();transcription.text1.focus()" value="clear"> </td>
+<td width="50%"> Result:<br> <textarea name="text2" rows="20" onKeyUp="latcyr()" class="bordr"></textarea> <br> <br> 
+<input type="button" class="tls" onClick="transcription.text2.select();copy2()" value="Select"> 
+&nbsp; &nbsp; <input type="button" class="tls" onClick="reset();transcription.text2.focus()" value="clear"> </td>
+</tr>
+</table>
+</form>
+	<h3>Other Related Tools</h3>
+<table id="example2" class="table table-bordered table-hover">
+<tbody>
+		<tr>
+<td><a href="hindi_alphabet.php" title="Hindi Alphabet">Hindi Alphabet</a></td>
+<td><a href="hindi_keyboard.php" title="Hindi Keyboard">Hindi Keyboard</a></td>
+<td><a href="hindi_translation.php" title="Hindi Translation">Hindi Translation</a></td>
+<td><a href="romanization.php" title="Other Converters">Converters</a></td>
+		</tr></tbody></table>
+		<br />
+	<p><b>How to Use</b>: The tool above can be used to help you convert Marathi characters into Latin characters. In other words, you will be able to see how the words sound phonetically.</p>
+		<h3>Did you know?</h3>
+<p>Romanization is intended to enable the casual reader who is not familiar with the original script to pronounce Marathi reasonably accurately. The tools makes an attempt to render the significant sounds (phonemes) of the Marathi as faithfully as possible into English (Latin Characters).</p>
+
+<p><b>Romanization</b> (latinization) is the representation of a written word or spoken speech with the Roman (Latin) alphabet, where the original language uses different writing characters such as Marathi. Methods of romanization include transliteration, for representing written text, and transcription, for representing the spoken word. Each romanization process has its own set of rules for pronunciation of the romanized words, which is the case with our Marathi converter above.</p>
+
+<p><b>Transliteration</b> is the romanization attempts to transliterate the original script, the guiding principle is a one-to-one mapping of characters from Marathi into the Latin script, with less emphasis on how the result sounds when pronounced according to English.</p>
+
+<p><b>Transcription</b> is the conversion of a representation of Marathi into another representation of Marathi, the same language just in a different form.</p>
+
+<p><b>Phonetic conversions</b> attempts to depict all phones in Marathi, sacrificing legibility if necessary by using characters or conventions not found in Latin. The International Phonetic Alphabet is the most common system of phonetic transcription.</p>
+
+<p><b>Tradeoffs</b>: For Marathi, building a usable romanization involves tradeoffs between Marathi and Latin characters. Pure transcriptions are generally not possible, because Marathi contains sounds and distinctions not found in English. Which explains why innacuracy can happen from time to time.</p>
+<p>You can also check other important tools in many languages here: <a href="index.php" title="Learn Languages">Learn Languages</a>. Don't forget to <b>bookmark</b> this page.</p>
+                    </div>
+                </div>
+            </div>
+           
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Copyright &copy; 2019 <a href="http://mylanguages.org">MYLANGUAGES.ORG</a>.</strong>
+</div>
+    </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+ 
+    
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
+
